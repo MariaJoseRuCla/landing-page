@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import StarRating from "./StarRating";
 
 export default function ReviewButton() {
-  const [showForm, setShowForm] = useState(false);
-  const [userName, setUserName] = useState("");
-  const [review, setReview] = useState("");
-  const [message, setMessage] = useState("");
-  const [rating, setRating] = useState(0);
+  const [showForm, setShowForm] = useState<boolean>(false);
+  const [userName, setUserName] = useState<string>("");
+  const [review, setReview] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [rating, setRating] = useState<number>(0);
 
-  function handleWriteReview() {
+  function handleWriteReview(): void {
     setShowForm(true);
     setMessage("");
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault();
     if (userName.trim() === "" || review.trim() === "" || rating === 0) return;
 

@@ -1,4 +1,5 @@
 import React from "react";
+
 export default function Video() {
     return (
         <div className="max-w-4xl mx-auto my-12">

@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
+interface Review {
+  nombre: string;
+  texto: string;
+  rating: number;
+}
+
 export default function Reviews() {
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:4321/api/reviews")
       .then((res) => res.json())
-      .then((data) => setReviews(data))
+      .then((data: Review[]) => setReviews(data))
       .catch((err) => console.error("Error al cargar opiniones:", err));
   }, []);
 
   return (
-    <section className="max-w-4xl mx-auto mt-12 p-6 bg-white rounded-lg shadow flex flex-col md:flex-row items-center justify-center gap-8">no
+    <section className="max-w-4xl mx-auto mt-12 p-6 bg-white rounded-lg shadow flex flex-col md:flex-row items-center justify-center gap-8">
       <div className="flex-1 space-y-4 max-w-full px-2 md:px-6">
         {reviews.length === 0 ? (
           <p className="text-center text-gray-600">Aún no hay opiniones.</p>

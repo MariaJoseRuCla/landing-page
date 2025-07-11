@@ -1,7 +1,11 @@
 import React from "react";
 
-export default function BuyButton ({price}) {
-    function handleClick() {
+interface BuyButtonProps {
+    price: number;
+}
+
+export default function BuyButton ({price}: BuyButtonProps) {
+    function handleClick(): void {
         alert ('Gracias por la compra');
     }
     return (

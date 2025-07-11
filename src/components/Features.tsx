@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Features () {
-    const features  = [
+    const features: string[] = [
         "Pantalla de alta resolución de 6”. ",
         "Luz cálida ajustable para leer de noche.",
         "Almacenamiento gratuito en la nube para todo el contenido de Amazon.",

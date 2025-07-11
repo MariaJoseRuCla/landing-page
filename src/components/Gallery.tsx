@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function Gallery() {
-	const images = ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg", "/images/4.png"];
+	const images: string[] = ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg", "/images/4.png"];
 
 	return (
 		<section
