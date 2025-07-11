@@ -1,0 +1,18 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Features from '../components/Features.jsx';
+import Gallery from '../components/Gallery.jsx';
+import Layout from '../layouts/Layout.astro';
+import Reviews from '../components/Reviews.jsx';
+import ReviewButton from '../components/ReviewButton.jsx';
+import Video from '../components/Video.jsx';
+---
+
+<Layout>
+  <Welcome />
+  <Features client:load />
+  <Gallery client:load />
+  <Video client:load />
+  <Reviews client:load />
+  <ReviewButton client:load />
+</Layout>

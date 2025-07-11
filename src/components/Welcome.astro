@@ -1,0 +1,19 @@
+---
+import BuyButton from '../components/BuyButton.jsx';
+const productName = 'Kindle Paperwhite';
+const productDescription = 'Lee cómodamente tanto de día como de noche.';
+const productPrice = '119€';
+---
+
+<section id="welcome" class="mt-8">
+  <div class="flex items-center justify-between gap-8 flex-wrap">
+    <div class="flex-1 min-w-[300px] text-left">
+      <h1 class="text-4xl font-bold mb-4 text-gray-900">Compra tu {productName}</h1>
+      <p class="text-lg text-gray-700 mb-6">{productDescription}</p>
+      <BuyButton price={productPrice} client:load />
+    </div>
+    <div class="flex-1 min-w-[300px]">
+      <img src="/images/kindle.jpg" alt="Imagen del kindle" class="w-full rounded-lg" />
+    </div>
+  </div>
+</section>
