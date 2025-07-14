@@ -2,7 +2,7 @@ import React from "react";
 
 const Table: React.FC = () => {
     return (
-        <section className="px-4 py-8 ">
+        <section className="">
             <h2>Compara los dispositivos Kindle</h2>
             <table>
                 <thead>
