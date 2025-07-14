@@ -6,12 +6,14 @@ import Layout from '../layouts/Layout.astro';
 import Reviews from '../components/Reviews.tsx';
 import ReviewButton from '../components/ReviewButton.tsx';
 import Video from '../components/Video.tsx';
+import Table from '../components/Table.tsx';
 ---
 
 <Layout>
   <Welcome />
   <Features client:load />
   <Gallery client:load />
+  <Table client:load />
   <Video client:load />
   <Reviews client:load />
   <ReviewButton client:load />
